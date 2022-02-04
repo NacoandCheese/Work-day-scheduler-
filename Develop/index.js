@@ -12,18 +12,43 @@ document.getElementById("currentDay").textContent = "Today's date and time: " + 
 
 // event listener for multiple buttons
 
-document.getElementById("demo").addEventListener("click", saveButton);
+// document.getElementById("demo").addEventListener("click", saveButton);
 
-function saveButton() {
-    document.getElementById("demo").innerHTML = "You Clicked Me!";
-}
+// function saveButton() {
+//     document.getElementById("demo").innerHTML = "You Clicked Me!";
+// }
 
 
 
 btns = document.getElementsByClassName("saveBtn");
+console.log(btns)
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
+        var element = event.target
+        
+        //target input field after user inputs then save user input
+        //we are traversing the DOM
+        var inputText = element.parentElement.previousElementSibling.firstElementChild.value
 
+        //need to traverse the DOM again to the 'data-time' attribute of the row you are in
+        //var hour = //traverse DOM here
+        var hour = element.parentElement.previousElementSibling.nextSibling.getAttribute("data-time")
+        console.log(hour)
+        //console log hour
+        // end result should be "9", "10", etc depeding on which save button you press
+
+        //now that you have both hour and inputText, save them in local storage
+        // use class examples of how to save stuff in localStorage
+        /*localStorage should store an object. The object should look like this:
+                {'9': 'This is a meeting',
+                 '10': 'Meeting 2}
+        */
+
+    
+        // when stuff is correctly saved in localStorage, you want to fill the activities calendar upon page load
+        // write new function to do this . THIS SHOULD NOT BE IN THIS FUNCTION
+        // this is something like document.initialize (this happens when the page loads)
+        // when page loads, read localstorage and write that data into your HTML
     })
 }
 
