@@ -36,6 +36,26 @@ textarea{
   border-top: 1px solid white;;
 }
 
+.activity {
+  width: 400px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+}
+
+th {
+  border: 1px solid black;
+}
+
+.time-col {
+  width: 400px;
+  text-align: center;
+  background-color: gray;
+}
+
 .hour {
   background-color: #ffffff;
   color: #000000;
