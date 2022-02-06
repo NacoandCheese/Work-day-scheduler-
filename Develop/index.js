@@ -32,8 +32,14 @@ for (var i = 0; i < btns.length; i++) {
 
         //need to traverse the DOM again to the 'data-time' attribute of the row you are in
         //var hour = //traverse DOM here
-        var hour = element.parentElement.previousElementSibling.nextSibling.getAttribute("data-time")
-        console.log(hour)
+        // var hour = element.parentElement.previousElementSibling.nextSibling.
+        // console.log(hour)
+
+        var hours = document.querySelectorAll('[data-id]')
+        hours.dataset.id === 'data-id'
+
+        hours.dataset.id = 'data-id'
+        console.log(hours)
         //console log hour
         // end result should be "9", "10", etc depeding on which save button you press
 
